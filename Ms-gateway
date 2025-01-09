@@ -1,0 +1,14 @@
+eureka:
+  client:
+    serviceURL:
+      defaultZone: http://localhost:6001/eureka
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: Ms-gestion
+          uri: lb://Ms-gestion
+          predicates:
+            - Path=/Ms-gestion/**
+          filters:
+            - RewritePath=/projet/(?<path>.*), /$\\{path}
