@@ -1,11 +1,5 @@
-server:
-  port: 6001
+server.port=6001
 
-eureka: 
- client:
-  registerWithEureka: false
-  fetchRegistry: false
- serviceUrl:
-  defaultZone: https://localhost:6001/eureka
-
-  
+eureka.client.register-with-eureka=false
+eureka.client.fetch-registry=false
+eureka.client.service-url.defaultZone=https://localhost:6001/eureka
